@@ -1,0 +1,53 @@
+\documentclass{mipt-thesis-bs}
+% Следующие две строки нужны только для biblatex. Для inline-библиографии их следует убрать.
+\usepackage{mipt-thesis-biblatex}
+\addbibresource{main.bib}
+
+\title{}
+\author{Федорец Никита Сергеевич}
+\supervisor{Дас Бисваруп}
+%\referee{Петров Д.\,Е.}       % требуется только для mipt-thesis-ms
+\groupnum{7910}
+\faculty{{\bf Направление поготовки:} 01.03.02 Прикладная математика и информатика}
+\department{{\bf Направленность подготовки:} Прикладная математика и компьютерные науки}
+
+\begin{document}
+
+% \frontmatter
+\mainmatter
+\titlepage
+\thispagestyle{empty}
+
+\chapter*{Аннотация} 
+Здесь будет аннотация
+
+\newpage
+
+\tableofcontents 
+% \titlecontents
+
+
+% \chapter{Аннотация}
+
+
+\chapter{Введение}
+\section{start}
+Здесь идет текст. Вот так выглядит ссылка на библиографию \cite{langmuir26}. 
+Аналогично добавляются еще главы, внутри них можно объявлять секции с помощью \verb|\section|.
+\section{end}
+1234
+
+\backmatter
+
+\printbib
+% Следующие строки необходимо раскомментировать, а предыдущую закомментировать, если используется inline-библиография.
+%\begin{thebibliography}{99}
+%    \bibitem{langmuir26}
+%        H. Mott-Smith, I. Langmuir. ``The theory of collectors in gaseous discharges''. \emph{Phys. Rev.} \textbf{28} (1926)
+%\end{thebibliography}
+
+\chapter{Благодарности}
+
+Благодарности идут тут.
+
+\end{document}

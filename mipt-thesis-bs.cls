@@ -7,7 +7,7 @@
 }
 \ProcessOptions\relax
 
-\LoadClass[a4paper,12pt]{book}
+\LoadClass[a4paper,12pt,onepage]{book}
 %%%%%%%%%%%%%%%%%%%%%%%%%%
 
 %%%%% Useful packages %%%%%
@@ -31,7 +31,7 @@
 
 %%%%% Set up correct formatting %%%%%
 \geometry{left=3cm}
-\geometry{right=2cm}
+\geometry{right=1.5cm}
 \geometry{top=2cm}
 \geometry{bottom=2cm}
 \onehalfspace
@@ -156,9 +156,9 @@
 %%%%%%%% Headings
 \fancypagestyle{miptthesis}{%
     \fancyhf{}
-    \fancyhead[RO, LE]{\thepage}
-    \fancyhead[CO]{\leftmark}
-    \fancyhead[CE]{\rightmark}
+    \cfoot{\thepage}
+    % \fancyfoot[RO]{\leftmark}
+    % \fancyfoot[RE]{\rightmark}
 }
 \pagestyle{miptthesis}
 \renewcommand{\chaptermark}[1]{\markboth{\hfill\normalfont #1\hfill}{}}
@@ -194,16 +194,18 @@
 \renewcommand{\titlepage}{%
     \pagestyle{empty}
     \begin{center}
-        {\bf Министерство образования и науки Российской Федерации \\
-        Московский физико-технический институт (государственный
-        университет) \\ }
+        {\bf Федеральное государственное автономное образовательное учреждение высшего образования \\
+        <<Московский физико-технический институт (государственный
+        университет)>> \\ }
         \vspace{1cm}
+    \end{center}
+        
+    \noindent \mtfacultytext \\
+    \noindent \mtdepartmenttext \\
 
+    \vspace{3em}
 
-        \mtfacultytext \\
-        \mtdepartmenttext \\
-
-        \vspace{3em}
+    \begin{center}
 
         Выпускная квалификационная работа бакалавра по направлению 010900
         <<Прикладные математика и физика>>
@@ -220,10 +222,10 @@
 
 
     \begin{flushright}
-        Студент \mtgroupnumtext{} группы \\
+        {\bf Студент \mtgroupnumtext{} группы:} \\
         \mtauthortext{} \\
         \vspace{2em}
-        Научный руководитель \\
+        {\bf Научный руководитель:} \\
         \mtsupervisortext{} \\
     \end{flushright}
 
@@ -236,11 +238,11 @@
 
 }
 
-\newcommand{\titlecontents}{
-    \titlepage \addemptypage
-    \tableofcontents \addemptypage
-    \pagestyle{miptthesis}
-}
+% \newcommand{\titlecontents}{
+%     \titlepage \addemptypage
+%     \tableofcontents \newpage
+%     \pagestyle{miptthesis}
+% }
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \endinput
